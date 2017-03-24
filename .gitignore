@@ -41,3 +41,6 @@ gradlew.bat
 # IntelliJ
 *.ipr
 *.iws
+
+# Other
+*.htgd
