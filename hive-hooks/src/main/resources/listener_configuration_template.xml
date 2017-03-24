@@ -30,6 +30,7 @@
         <comment>
             JDBC connection URL to the MySQL instance containing the audit log.
             The URL should include the DB name as well.
+            JDBC is unaware of the DB naming scheme in most cases, thus the declarative nature of this URL.
         </comment>
     </property>
 
