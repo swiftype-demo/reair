@@ -30,7 +30,7 @@ While batch replication is running, there are no consistency guarantees on the d
 
 ### What kind of consistency guarantees	does incremental replication provide while it's running?
 
-Overall, incremental replication provides eventual consistency. Increment replication also guarantees that data directories never contain partial data. While incremental replication is running and there are updates to a table on the source warehouse, tables on the destination warehouse will either contain old data, new data, but never a partial result. These are the same semantics that Hive provides when overwriting a table with a query. In addition, incremental replication guarantees that data for a table will be copied before the before the metadata, so if a table is present in the metastore, the table can be queried.
+Overall, incremental replication (IR) provides eventual consistency. It also guarantees that data directories never contain partial data. While IR is running and there are updates to a table on the source warehouse, tables on the destination warehouse will either contain old data, new data, but never a partial result. These are the same semantics that Hive provides when overwriting a table with a query. In addition, IR guarantees that data for a table will be copied before the before the metadata, so if a table is present in the metastore, the table can be queried.
 
 ### Are there any issues with restarting the incremental replication process from a previous point in the audit log?
 
